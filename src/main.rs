@@ -357,7 +357,7 @@ impl Parser {
 fn main() {
     println!("=== Calculadora de Expressões ===");
     println!("Digite uma expressão matemática (ou 'sair' para encerrar)");
-    println!("Exemplos: 10 + 20, (10 + 20) * 30, -5 + 3\n");
+    println!("Exemplos: 10 + 20, (10 + 20) * 30\n");
 
     loop {
         print!("Expressão: ");
@@ -389,7 +389,7 @@ fn main() {
 
                         match expr.evaluate() {
                             Some(result) => println!("Resultado: {}\n", result),
-                            None => println!("Erro: Divisão por zero ou overflow\n"),
+                            None => println!("Resultado: none\n"),
                         }
                     }
                     Err(e) => println!("Erro ao fazer parse: {}\n", e),
